@@ -1,17 +1,33 @@
-import FancyLink from '@/components/fancyLink'
 import Container from '@/components/container'
+import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="py-4 bg-gray-200 mb-4 md:mb-6 xl:mb-8">
+    <header className="py-4 bg-off-white">
       <Container>
-        <div className="flex flex-wrap">
-          <FancyLink destination="/" a11yText="Navigate to the home page" label="Next x Tailwind x Motion" extraClasses="mb-1 md:mb-0" />
+        <div className="flex items-center justify-between">
+          <Link href="/" className="font-horizon text-3xl text-dark-gray">
+            KONTUR
+          </Link>
 
-          <nav className="ml-auto flex space-x-3 w-full text-sm md:text-base md:w-auto">
-            <FancyLink destination="/" a11yText="Navigate to the home page" label="Home" />
-
-            <FancyLink destination="/about" a11yText="Navigate to the about page" label="About" />
+          <nav>
+            <ul className="flex space-x-6 font-agrandir-narrow-regular text-dark-gray">
+              <li>
+                <Link href="/salon" className="text-blue hover:underline">
+                  SALON
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="hover:text-blue hover:underline">
+                  TEAM
+                </Link>
+              </li>
+              <li>
+                <Link href="/book" className="hover:text-blue hover:underline">
+                  BOOK NOW
+                </Link>
+              </li>
+            </ul>
           </nav>
         </div>
       </Container>
