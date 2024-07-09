@@ -7,6 +7,9 @@ module.exports = {
     fontFamily: {
       'sans': ['Arial', 'sans-serif'],
       'mono': ['Lucida Console', 'Courier', 'monospace'],
+      'agrandir-narrow-bold': ['Agrandir-Narrow-Bold', 'sans-serif'],
+      'agrandir-narrow-regular': ['Agrandir-Narrow-Regular', 'sans-serif'],
+      'horizon': ['Horizon', 'sans-serif'],
     },
     screens: {
       sm: "640px",
@@ -20,6 +23,11 @@ module.exports = {
       colors: {
         'black': '#000',
         'white': '#FFF',
+        'off-white': '#f0f0f0',
+        'light-gray': '#b0b0b0',
+        'blue': '#4682b4',
+        'dark-gray': '#2a3439',
+        'medium-gray': '#9a9a9a',
         'example-color': {
           light: '#ffb288',
           DEFAULT: '#d18d67',

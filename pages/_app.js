@@ -9,9 +9,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <DefaultSeo {...SEO} />
+      <DefaultSeo {...SEO} /> 
 
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait" initial={true}>
         <Component {...pageProps} key={router.asPath} />
       </AnimatePresence>
     </>

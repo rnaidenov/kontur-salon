@@ -16,13 +16,13 @@
     "next",
     "tailwind",
     "framer",
-    "motion",
-    "preact"
+    "motion"
   ],
   "homepage": "https://sg-next-tailwind-motion.vercel.app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {

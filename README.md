@@ -1,4 +1,4 @@
-# ShiftWalk Starter
+# Shiftwalk Starter
 Demo: [https://sg-next-tailwind-motion.vercel.app/](https://sg-next-tailwind-motion.vercel.app/)
 
 Locomotive Scroll Demo: [https://sg-next-tailwind-motion-locomotive.vercel.app/](https://sg-next-tailwind-motion-locomotive.vercel.app/)
@@ -7,7 +7,7 @@ A simple [Next.js](https://nextjs.org/) boilerplate with [TailwindCSS](https://t
 
 ## ✨ Features
 - [Next](https://nextjs.org/) 12
-- [SWC Minification](https://nextjs.org/docs/
+- [SWC Minification](https://nextjs.org/docs/upgrading#swc-replacing-terser-for-minification)
 - [Tailwind](https://tailwindcss.com/) 3.0
 - Custom [PostCSS](https://postcss.org/) setup preconfigured to allow for `@import` and simple CSS nesting
 - [Framer Motion 4](https://www.framer.com/motion/) (With [LazyMotion](https://www.framer.com/api/motion/lazy-motion/) setup for smaller bundle sizes)
@@ -15,7 +15,7 @@ A simple [Next.js](https://nextjs.org/) boilerplate with [TailwindCSS](https://t
 - SEO preconfigured with [next-seo](https://github.com/garmeeh/next-seo)
 - [Module Aliasing](https://nextjs.org/docs/advanced-features/module-path-aliases) preconfigured with `jsconfig.json`
 - [Feature branch](https://github.com/samuelgoddard/next-tailwind-motion/tree/locomotive-scroll) with [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/) preconfigured for smooth, lerp based page scrolling
-- Out the box 100 scores on both mobile &amp; desktop on [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsg-next-tailwind-motion-locomotive.vercel.app%2F&tab=mobile)
+- Out the box 100 scores on both mobile &amp; desktop on [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsg-next-tailwind-motion.vercel.app%2F&tab=mobile)
 
 _*To remove Preact and switch back to React simply remove the code in `next.config.js`_
 

@@ -1,8 +1,23 @@
-/* @font-face {
-  font-family: 'Example Sans';
-  src: url('../public/fonts/ExampleSans-Regular.woff2') format('woff2'),
-      url('../public/fonts/ExampleSans-Regular.woff') format('woff');
-  font-weight: 400;
+@font-face {
+  font-family: 'Agrandir-Narrow-Bold';
+  src: url('../public/fonts/Agrandir-Narrow-Bold.woff2') format('woff2');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
-} */
+}
+
+@font-face {
+  font-family: 'Agrandir-Narrow-Regular';
+  src: url('../public/fonts/Agrandir-Narrow-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Horizon';
+  src: url('../public/fonts/Horizon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
