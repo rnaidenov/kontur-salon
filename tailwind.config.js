@@ -7,8 +7,8 @@ module.exports = {
     fontFamily: {
       'sans': ['Arial', 'sans-serif'],
       'mono': ['Lucida Console', 'Courier', 'monospace'],
-      'agrandir-narrow-bold': ['Agrandir-Narrow-Bold', 'sans-serif'],
-      'agrandir-narrow-regular': ['Agrandir-Narrow-Regular', 'sans-serif'],
+      'greycliff-bold': ['Greycliff-Bold', 'sans-serif'],
+      'greycliff-medium': ['Greycliff-Medium', 'sans-serif'],
       'horizon': ['Horizon', 'sans-serif'],
     },
     screens: {

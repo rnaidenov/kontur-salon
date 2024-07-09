@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Agrandir-Narrow-Bold';
-  src: url('../public/fonts/Agrandir-Narrow-Bold.woff2') format('woff2');
+  font-family: 'Greycliff-Medium';
+  src: url('../public/fonts/Greycliff-Medium.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Agrandir-Narrow-Regular';
-  src: url('../public/fonts/Agrandir-Narrow-Regular.woff2') format('woff2');
+  font-family: 'Greycliff-Bold';
+  src: url('../public/fonts/Greycliff-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

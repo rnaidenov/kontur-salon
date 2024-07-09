@@ -11,6 +11,8 @@
 /* Tailwind Utilities */
 @import 'tailwindcss/utilities';
 
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
 
 /* Simple defaults */
 body {
