@@ -16,7 +16,7 @@ const NavItem = ({ href, children, isActive, onHover, isExternal }) => {
           animate={{
             opacity: isActive ? 1 : 0.5
           }}
-          transition={{ duration: 0.7, ease: 'circIn' }}
+          transition={{ duration: 0.6, ease: 'circIn' }}
         >
           {children}
           <motion.div
@@ -25,7 +25,7 @@ const NavItem = ({ href, children, isActive, onHover, isExternal }) => {
             variants={{
               hover: { width: '100%', opacity: 1 }
             }}
-            transition={{ duration: 0.7, ease: 'circOut' }}
+            transition={{ duration: 0.4, ease: 'circOut' }}
           />
         </motion.span>
       </LinkComponent>
@@ -37,7 +37,7 @@ export default function Header() {
   const [activeItem, setActiveItem] = useState(null);
 
   const navItems = [
-    { href: '/salon', label: 'SALON' },
+    { href: '/', label: 'SALON' },
     { href: '/team', label: 'TEAM' },
     { href: 'https://www.fresha.com/a/kontur-salon-sofia-ulitsa-lyuben-karavelov-24-c3i43yw2', label: 'BOOK NOW', isExternal: true }
   ];

@@ -1,11 +1,7 @@
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react';
 import Layout from '@/components/layout'
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import Container from '@/components/container'
 import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m, useScroll, useTransform } from 'framer-motion'
-import { NextSeo } from 'next-seo'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 
 export default function Home() {
@@ -22,9 +18,7 @@ export default function Home() {
   ]
 
   return (
-    <Layout>
-      <NextSeo title="KONTUR Salon" />
-
+    <Layout title="KONTUR">
       <LocomotiveScrollProvider
         options={{
           smooth: true,
@@ -40,7 +34,6 @@ export default function Home() {
         watch={[]}
       >
         <div data-scroll-container ref={containerRef}>
-          <Header />
 
           <LazyMotion features={domAnimation}>
             <m.main
@@ -54,7 +47,13 @@ export default function Home() {
                 className="relative h-screen"
                 data-scroll-section
               >
-                <m.div style={{ opacity }} className="absolute inset-0">
+                <m.div
+                  style={{ opacity }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, ease: 'circIn' }}
+                  className="absolute inset-0"
+                >
                   <video
                     ref={videoRef}
                     autoPlay
