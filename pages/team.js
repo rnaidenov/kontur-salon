@@ -63,7 +63,7 @@ export default function Team() {
   return (
     <Layout title="KONTUR Team">
       <div
-        className="fixed inset-0 z-0"
+        className="fixed inset-0 z-0 w-1/2 left-1/4"
         style={{
           transform: imageTransform,
           opacity: imageOpacity,
@@ -71,13 +71,11 @@ export default function Team() {
         }}
       >
         <Image
-          className='w-[50%] m-auto'
+          className='w-full h-full m-auto object-cover'
           src="/images/team.jpg"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          height={800}
+          width={1200}
           alt="KONTUR Team"
-          width={500}
-          height={500}
-          objectFit="cover"
         />
       </div>
       <div
@@ -94,12 +92,8 @@ export default function Team() {
         options={{
           smooth: true,
           lerp: 0.025,
-          smartphone: {
-            smooth: true
-          },
-          tablet: {
-            smooth: true
-          }
+          smartphone: { smooth: true },
+          tablet: { smooth: true }
         }}
         containerRef={scrollRef}
         watch={[]}
@@ -108,53 +102,44 @@ export default function Team() {
         <div
           data-scroll-container
           ref={scrollRef}
-          className="snap-y snap-mandatory"
+          className="snap-y snap-mandatory overflow-y-scroll"
         >
-          <section className='h-[700vh] w-full' data-scroll-section />
+          <section className='h-[200vh] w-full' data-scroll-section />
+
+          {/* Team members section */}
           <LazyMotion features={domAnimation}>
-            <m.main
-              initial="initial"
-              animate="enter"
-              exit="exit"
-              className="bg-white"
-            >
-              {teamMembers.map((member, index) => (
-                <m.section
-                  key={member.name}
-                  data-scroll-section
-                  className="h-screen flex items-center justify-center py-16 snap-start"
-                >
-                  <div className="max-w-6xl w-full flex flex-row items-start space-x-12">
-                    <m.div
-                      className="w-1/2"
-                      initial={{ opacity: 0, x: -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={300}
-                        height={400}
-                        className="w-full rounded-lg object-cover"
-                      />
-                    </m.div>
-                    <m.div
-                      className="w-1/2 pt-12"
-                      initial={{ opacity: 0, x: 50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                    >
-                      <h2 className="font-greycliff-bold text-5xl mb-2">{member.name}</h2>
-                      <h3 className="font-greycliff-medium text-2xl text-gray-600 mb-6">{member.role}</h3>
-                      <p className="font-greycliff-medium text-lg leading-relaxed">{member.description}</p>
-                    </m.div>
+            {teamMembers.map((member, index) => (
+              <section
+                key={member.name}
+                data-scroll-section
+                className="h-screen flex items-center justify-center py-16 snap-center"
+              >
+                <div className="max-w-6xl w-full flex flex-row items-start space-x-12">
+                  <div
+                    className="w-1/2"
+                    data-scroll
+                    data-scroll-speed="1"
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={300}
+                      height={400}
+                      className="w-full rounded-lg object-cover"
+                    />
                   </div>
-                </m.section>
-              ))}
-            </m.main>
+                  <div
+                    className="w-1/2 pt-12"
+                    data-scroll
+                    data-scroll-speed="2"
+                  >
+                    <h2 className="font-greycliff-bold text-5xl mb-2">{member.name}</h2>
+                    <h3 className="font-greycliff-medium text-2xl text-gray-600 mb-6">{member.role}</h3>
+                    <p className="font-greycliff-medium text-lg leading-relaxed">{member.description}</p>
+                  </div>
+                </div>
+              </section>
+            ))}
           </LazyMotion>
         </div>
       </LocomotiveScrollProvider>
